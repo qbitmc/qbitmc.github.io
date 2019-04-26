@@ -9,6 +9,7 @@
 		<title>QbitMC</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="referrer" content="origin">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -72,12 +73,12 @@
 								<form method="post" action="https://formspree.io/qbitmc@gmail.com">
 									<div class="fields">
 										<div class="field half">
-											<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-											<label for="demo-priority-low">Tengo cuenta de Minecraft Premium</label>
+											<input type="radio" id="has-minecraft" name="has-minecraft" checked>
+											<label for="has-minecraft">Tengo cuenta de Minecraft Premium</label>
 										</div>
 										<div class="field half">
-											<input type="radio" id="demo-priority-high" name="demo-priority">
-											<label for="demo-priority-high">No tengo cuenta de Minecraft Premium</label>
+											<input type="radio" id="doesnt-have-minecraft" name="has-minecraft">
+											<label for="doesnt-have-minecraft">No tengo cuenta de Minecraft Premium</label>
 										</div>
 										<div class="field half">
 											<label for="name">Sobrenombre de preferencia</label>
@@ -85,23 +86,23 @@
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="text" name="_replyto" id="email" />
 										</div>
 										<div class="field half">
-											<label for="name">Nombre dentro del juego</label>
-											<input type="text" name="name" id="name" />
+											<label for="ign">Nombre dentro del juego</label>
+											<input type="text" name="ign" id="ign" />
 										</div>
 										<div class="field half">
-											<label for="name">Edad</label>
-											<input type="text" name="name" id="name" />
+											<label for="age">Edad</label>
+											<input type="text" name="age" id="age" />
 										</div>
 										<div class="field">
-											<label for="message">¿Porqué te interesa formar parte de QbitMC?</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+											<label for="why">¿Porqué te interesa formar parte de QbitMC?</label>
+											<textarea name="why" id="why" rows="4"></textarea>
 										</div>
 										<div class="field">
-											<label for="demo-category">Selecciona la oración que mejor describa tu especialidad dentro del juego:</label>
-											<select name="demo-category" id="demo-category">
+											<label for="skillset">Selecciona la oración que mejor describa tu especialidad dentro del juego:</label>
+											<select name="skillset" id="skillset">
 												<option value="">-</option>
 												<option value="1">Decorador, me gusta construír y tengo buen gusto para decorar.</option>
 												<option value="1">Redstoner, me gusta idear mecanismos de redstone para automatizar procesos.</option>
@@ -111,16 +112,16 @@
 											</select>
 										</div>
 										<div class="field">
-											<label for="message">Cuentanos más acerca de tí</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+											<label for="about">Cuentanos más acerca de tí</label>
+											<textarea name="about" id="about" rows="4"></textarea>
 										</div>
 										<div class="field">
-											<label for="name">Agrega un albúm de imágenes (imgur) de tus construcciones</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
 											<label for="name">¿Cuál es tu ID de discord?</label>
 											<input type="text" name="name" id="name" placeholder="nombre#0000" />
+										</div>
+										<div class="field">
+											<label for="album" class="button icon fa-upload"> Sube screenshots de tus construcciones previas</label>
+											<input type="file" name="album" id="album" multiple/>
 										</div>
 										<div class="field half">
 											<input type="checkbox" id="demo-copy" name="demo-copy">
@@ -128,8 +129,8 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
+										<li><input type="submit" value="Enviar" class="primary" /></li>
+										<li><input type="reset" value="Reiniciar" /></li>
 									</ul>
 								</form>
 								<ul class="icons">

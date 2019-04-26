@@ -385,6 +385,10 @@ input, select, textarea {
 		text-transform: uppercase;
 	}
 
+	input[type="file"] {
+		display: none;
+	}
+
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
