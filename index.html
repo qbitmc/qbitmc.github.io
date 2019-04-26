@@ -70,39 +70,39 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Aplicar</h2>
-								<form accept-charset="UTF-8" method="post" action="https://usebasin.com/f/7eeb30d5e2ea">
+								<form name="qbitmcForm" accept-charset="UTF-8" method="post" action="https://usebasin.com/f/7eeb30d5e2ea" onsubmit="return validateForm()">
 									<div class="fields">
 										<div class="field half">
-											<input type="radio" id="has-minecraft" name="has-minecraft" checked>
+											<input type="radio" id="has-minecraft" name="has-minecraft" value="true" checked>
 											<label for="has-minecraft">Tengo cuenta de Minecraft Premium</label>
 										</div>
 										<div class="field half">
-											<input type="radio" id="doesnt-have-minecraft" name="has-minecraft">
+											<input type="radio" id="doesnt-have-minecraft" name="has-minecraft" value="false">
 											<label for="doesnt-have-minecraft">No tengo cuenta de Minecraft Premium</label>
 										</div>
 										<div class="field half">
-											<label for="name">Sobrenombre de preferencia</label>
-											<input type="text" name="name" id="name" />
+											<label for="name">Sobrenombre de preferencia*</label>
+											<input type="text" name="name" id="name" required/>
 										</div>
 										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<label for="email">Email*</label>
+											<input type="text" name="email" id="email" required/>
 										</div>
 										<div class="field half">
-											<label for="ign">Nombre dentro del juego</label>
-											<input type="text" name="ign" id="ign" />
+											<label for="ign">Nombre dentro del juego*</label>
+											<input type="text" name="ign" id="ign" required/>
 										</div>
 										<div class="field half">
-											<label for="age">Edad</label>
-											<input type="text" name="age" id="age" />
+											<label for="age">Edad*</label>
+											<input type="text" name="age" id="age" min="14" title="Debes tener al menos 14 años de edad para poder ser parte de la comunidad." required/>
 										</div>
 										<div class="field">
-											<label for="why">¿Porqué te interesa formar parte de QbitMC?</label>
-											<textarea name="why" id="why" rows="4"></textarea>
+											<label for="why">¿Porqué te interesa formar parte de QbitMC?*</label>
+											<textarea name="why" id="why" rows="4" required></textarea>
 										</div>
 										<div class="field">
-											<label for="skillset">Selecciona la oración que mejor describa tu especialidad dentro del juego:</label>
-											<select name="skillset" id="skillset">
+											<label for="skillset">Selecciona la oración que mejor describa tu especialidad dentro del juego*:</label>
+											<select name="skillset" id="skillset" required>
 												<option value="">-</option>
 												<option value="1">Decorador, me gusta construír y tengo buen gusto para decorar.</option>
 												<option value="2">Redstoner, me gusta idear mecanismos de redstone para automatizar procesos.</option>
@@ -112,19 +112,19 @@
 											</select>
 										</div>
 										<div class="field">
-											<label for="about">Cuentanos más acerca de tí</label>
-											<textarea name="about" id="about" rows="4"></textarea>
+											<label for="about">Cuentanos más acerca de tí*</label>
+											<textarea name="about" id="about" rows="4" required></textarea>
 										</div>
 										<div class="field">
-											<label for="discordid">¿Cuál es tu ID de discord?</label>
-											<input type="text" name="discordid" id="discordid" placeholder="nombre#0000" />
+											<label for="discordid">¿Cuál es tu ID de discord?*</label>
+											<input type="text" name="discordid" id="discordid" placeholder="nombre#0000" pattern="([^:@#\r\n]{2,32})#(\d{4})" title="Debes usar un ID de discord válido (Ejemplo: usuario#0000)" required/>
 										</div>
 										<div class="field">
-											<label for="album">Crea un albúm en <a href="https://imgur.com">Imgur</a> con imágenes de tus construcciones o proyectos previos en minecraft y añade el link al mismo.</label>
-											<input type="text" name="album" id="album" placeholder="https://imgur.com/a/-------"/>
+											<label for="album">Crea un albúm en <a href="https://imgur.com">Imgur</a> con imágenes de tus construcciones o proyectos previos en minecraft y añade el link al mismo*.</label>
+											<input type="url" name="album" id="album" placeholder="https://imgur.com/a/-------" title="Verifica que la URL esté bien" required/>
 										</div>
 										<div class="field">
-											<input type="checkbox" id="agreement" name="agreement">
+											<input type="radio" id="agreement" name="agreement" value="accepted">
 											<label for="agreement">He leído y acepto seguir las <a href="">reglas del servidor</a>.</label>
 										</div>
 									</div>
